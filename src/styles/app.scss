@@ -1,0 +1,60 @@
+@import './vars';
+
+body {
+  background: $dark-blue;
+  color: $white;
+  font-family: Verdana;
+  font-weight: 300;
+  font-size: $font-small;
+  line-height: $font-small;
+  margin: 0;
+  padding-top: $menu-bar-height;
+
+  @include respond-to('medium'){
+    font-size: $font-medium;
+    line-height: $font-medium;
+  }
+}
+
+h1 {
+  font-size: $font-large;
+  line-height: $font-large;
+  margin: 0.5rem 0;
+
+  @include respond-to('medium'){
+    font-size: $font-x-large;
+    line-height: $font-x-large;
+    margin: 1rem 0;
+  }
+}
+
+h2 {
+  font-size: $font-medium;
+  line-height: $font-medium;
+  font-weight: 400;
+  margin: 0.3rem 0;
+
+  @include respond-to('medium'){
+    font-size: $font-large;
+    line-height: $font-large;
+    margin: 0.8rem 0;
+  }
+}
+
+a{
+  cursor: pointer;
+  text-decoration: underline;
+
+  &:not(.light-a) {
+    color: $green;
+
+    &:active {
+      color: $light-green;
+    }
+
+    &:visited {
+      color: $green;
+    }
+
+  }
+}

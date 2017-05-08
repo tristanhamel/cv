@@ -1,0 +1,53 @@
+/* Colors */
+$blue: rgba(64, 98, 187, 1);
+$light-green: rgba(201, 228, 202, 1);
+$green: rgba(135, 187, 162, 1);
+$dark-green: rgba(59, 96, 100, 1);
+$dark-blue: rgba(54, 73, 88, 1);
+
+$black: #000;
+$light-gray: #333;
+$medium-gray: #666;
+$gray: #aaa;
+$light-gray: #ddd;
+$pale-gray: #eee;
+$white: #fff;
+
+/* typography */
+
+$font-x-small: 10px;
+$font-small: 12px;
+$font-medium: 16px;
+$font-large: 20px;
+$font-x-large: 36px;
+
+
+/* break points */
+
+$breakpoint-medium: 480px;
+$breakpoint-large: 768px;
+$breakpoint-x-large: 992px;
+
+$breakpoints: (
+        'medium': (min-width: $breakpoint-medium),
+        'large': (min-width: $breakpoint-large),
+        'x-large': (min-width: $breakpoint-x-large)
+);
+
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(type-of($raw-query) == 'string', unquote($raw-query), inspect($raw-query));
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '
+         + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}
+
+/* Others */
+$menu-bar-height: 3rem;
