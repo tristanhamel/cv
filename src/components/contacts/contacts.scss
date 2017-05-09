@@ -1,12 +1,17 @@
 @import '../../styles/vars.scss';
 
 .contacts {
-  float: right;
-  padding: 0 1rem;
-  width: 14rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 
-  @include respond-to('medium') {
-    width: 18rem;
+  .container {
+    padding: 0 1rem;
+    width: 14rem;
+
+    @include respond-to('medium') {
+      width: 18rem;
+    }
   }
 
   .contacts-line {
