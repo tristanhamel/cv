@@ -1,9 +1,13 @@
 import { appComponent } from './components/app';
 import { menuComponent } from './components/menu';
+import { introComponent } from './components/intro';
+import { contactsComponent } from './components/contacts';
 
 const modules = [
   appComponent,
-  menuComponent
+  menuComponent,
+  introComponent,
+  contactsComponent
 ];
 
 // base styles

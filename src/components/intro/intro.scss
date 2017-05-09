@@ -1,0 +1,36 @@
+@import '../../styles/vars';
+
+.intro {
+  min-height: 100vh;
+  position: relative;
+
+  .background {
+    background: url("../../images/itse1.jpg");
+    background-position-y: -140px;
+    filter: grayscale(100%); // remove and replace with a grayscale image because IE11 fucks it up
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -2;
+  }
+
+  .background-mask {
+    background: rgba($dark-blue, 0.8);
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .content {
+    align-items: center;
+    display: flex;
+    min-height: 100vh;
+
+    h1 {
+      margin: 0;
+    }
+  }
+}
