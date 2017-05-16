@@ -1,7 +1,41 @@
+$plus-sign-wh: 0.8rem;
+$plus-sign-padding: 0.5rem;
+
 [th-accordion-content] {
   display: none;
 
   &.accordion-expanded {
     //display: block;
+  }
+}
+
+[th-accordion-header] {
+  position: relative;
+
+  &:after {
+    content: '';
+    border-bottom: 1px solid white;
+    height: $plus-sign-wh/2;
+    width: $plus-sign-wh;
+    position: absolute;
+    top: calc(50% - #{$plus-sign-wh/2});
+    right: $plus-sign-padding;
+  }
+
+  &:before {
+    content: '';
+    border-right: 1px solid white;
+    height: $plus-sign-wh;
+    width: $plus-sign-wh/2;
+    position: absolute;
+    top: calc(50% - #{$plus-sign-wh/2});
+    right: $plus-sign-padding + $plus-sign-wh/2;
+    transition: all 0.5s;
+    transform-origin: right;
+  }
+
+  &.accordion-expanded:before {
+    transform: rotate(90deg);
+    opacity: 0;
   }
 }

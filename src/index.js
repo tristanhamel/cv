@@ -4,6 +4,9 @@ import { menuComponent } from './components/menu';
 import { introComponent } from './components/intro';
 import { contactsComponent } from './components/contacts';
 import { skillsComponent } from './components/skills';
+import { experienceComponent } from './components/experience';
+import { educationComponent } from './components/education';
+import { envoiComponent } from './components/envoi';
 
 const modules = [
   accordionComponent,
@@ -11,7 +14,10 @@ const modules = [
   menuComponent,
   introComponent,
   contactsComponent,
-  skillsComponent
+  skillsComponent,
+  experienceComponent,
+  educationComponent,
+  envoiComponent
 ];
 
 // base styles

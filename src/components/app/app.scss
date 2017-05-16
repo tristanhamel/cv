@@ -1,0 +1,10 @@
+@import "../../styles/vars";
+
+.section {
+  display: block;
+  padding: 0 0.5rem;
+
+  @include respond-to('medium') {
+    padding: 0 1rem;
+  }
+}

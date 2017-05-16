@@ -6,13 +6,13 @@ body {
   font-family: Verdana;
   font-weight: 300;
   font-size: $font-small;
-  line-height: $font-small;
+  line-height: $font-small*1.5;
   margin: 0;
   padding-top: $menu-bar-height;
 
   @include respond-to('medium'){
     font-size: $font-medium;
-    line-height: $font-medium;
+    line-height: $font-medium*1.5;
   }
 }
 
