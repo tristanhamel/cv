@@ -6,26 +6,33 @@
   width: 100%;
   z-index: 100;
 
-  .menu-bar {
+  .menu-toggle {
     align-items: center;
     background: $blue;
+    border-radius: 50%;
+    bottom: 0;
+    box-shadow: black 0 0 2px;
+    cursor: pointer;
     display: flex;
     height: $menu-bar-height;
-    justify-content: flex-end;
-    position: absolute;
-    top: 0;
-    width: 100%;
+    margin: 0.5rem;
+    position: fixed;
 
     @include respond-to('medium') {
       display: none;
     }
   }
 
-  .menu-toggle {
+  .menu-toggle-button {
     background: none;
     border: none;
     color: $white;
+    cursor: pointer;
     padding: 0.5rem;
+
+    &:focus {
+      outline: 0;
+    }
   }
 
   .menu-list {
@@ -38,10 +45,6 @@
     text-align: center;
     visibility: hidden;
 
-    &.visible {
-      visibility: visible;
-    }
-
     @include respond-to('medium') {
       flex-direction: row;
       margin-top: 0;
@@ -51,5 +54,19 @@
 
   .menu-item {
     padding: 0.5rem;
+
+    &.active {
+      color: pink;
+    }
+  }
+
+  &.visible {
+    .menu-list {
+      visibility: visible;
+
+      @include respond-to('medium') {
+        visibility: visible;
+      }
+    }
   }
 }
