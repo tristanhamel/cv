@@ -18,7 +18,7 @@
     margin: 0.5rem;
     position: fixed;
 
-    @include respond-to('medium') {
+    @include respond-to('large') {
       display: none;
     }
   }
@@ -40,15 +40,18 @@
     display: flex;
     flex-direction: column;
     list-style: none;
-    margin: $menu-bar-height 0 0;
     padding: 0.5rem 0;
     text-align: center;
     visibility: hidden;
 
-    @include respond-to('medium') {
-      flex-direction: row;
+    @include respond-to('large') {
+      background: transparent;
+      font-size: $font-large;
+      position: fixed;
+      top: 0;
+      height: 100vh;
+      justify-content: center;
       margin-top: 0;
-      visibility: visible;
     }
   }
 
@@ -57,14 +60,24 @@
 
     &.active {
       color: pink;
+
+      @include respond-to('large') {
+        transition: font-size 0.2s;
+        font-size: $font-x-large;
+        width: 12rem;
+      }
     }
   }
 
   &.visible {
     .menu-list {
       visibility: visible;
+    }
+  }
 
-      @include respond-to('medium') {
+  &.has-visible {
+    @include respond-to('large') {
+      .menu-list {
         visibility: visible;
       }
     }

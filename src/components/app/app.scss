@@ -16,11 +16,12 @@
 
 .section-title {
   @include respond-to('large') {
-    align-self: stretch;
+    //align-self: stretch;
     flex-shrink: 0;
-    font-size: $font-x-large;
-    justify-content: center;
-    padding-top: 5rem;
+    opacity: 0;
+    //font-size: $font-x-large;
+    //justify-content: center;
+    //padding-top: 5rem;
     width: 20rem;
 
   }

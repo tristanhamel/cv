@@ -8,7 +8,6 @@ body {
   font-size: $font-small;
   line-height: $font-small*1.5;
   margin: 0;
-  padding-top: $menu-bar-height;
 
   @include respond-to('medium'){
     font-size: $font-medium;

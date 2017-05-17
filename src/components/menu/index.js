@@ -39,10 +39,18 @@ export const menuComponent =  {
             .removeClass('active')
             .filter(i => i === activeElem.index)
             .addClass('active');
+
+          menu.addClass('has-visible');
+        } else if(!activeElem) {
+          sectionsXY = sectionsXY
+            .map(elm => Object.assign(elm, {isActive: false}));
+
+          $('.menu-item')
+            .removeClass('active');
+
+          menu.removeClass('has-visible');
         }
       });
-
-
     });
 
 
