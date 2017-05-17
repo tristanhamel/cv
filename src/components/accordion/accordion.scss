@@ -1,41 +1,52 @@
-$plus-sign-wh: 0.8rem;
+@import '../../styles/vars';
+
+$plus-sign-wh: 1.2rem;
 $plus-sign-padding: 0.5rem;
 
-[th-accordion-content] {
-  display: none;
+[th-accordion-section] {
+  border: solid rgba($white, 0.8);
+  border-width: 1px 0 0 0;
+}
 
-  &.accordion-expanded {
-    //display: block;
-  }
+[th-accordion-content] {
+  background: $dark-green;
+  display: none;
+  padding: 0.5rem 0 1rem 1rem;
 }
 
 [th-accordion-header] {
   position: relative;
+  color: $green;
+  cursor: pointer;
+  display: flex;
+  padding: 0.5rem 3rem 0.5rem 0.5rem;
+  transition: background 0.2s;
+
+  &:hover {
+    background: $dark-green;
+  }
 
   &:after {
-    content: '';
-    border-bottom: 1px solid white;
-    height: $plus-sign-wh/2;
-    width: $plus-sign-wh;
-    position: absolute;
-    top: calc(50% - #{$plus-sign-wh/2});
-    right: $plus-sign-padding;
-  }
-
-  &:before {
-    content: '';
-    border-right: 1px solid white;
+    background: $green;
+    border-radius: 50%;
+    content: '+';
+    color: $white;
     height: $plus-sign-wh;
-    width: $plus-sign-wh/2;
+    font-size: $plus-sign-wh;
+    font-weight: bold;
+    line-height: $plus-sign-wh;
     position: absolute;
+    right: $plus-sign-padding;
+    transition: transform 0.3s;
     top: calc(50% - #{$plus-sign-wh/2});
-    right: $plus-sign-padding + $plus-sign-wh/2;
-    transition: all 0.5s;
-    transform-origin: right;
+    width: $plus-sign-wh;
   }
+}
 
-  &.accordion-expanded:before {
-    transform: rotate(90deg);
-    opacity: 0;
-  }
+.accordion-expanded [th-accordion-header]{
+  background: $dark-green;
+}
+
+[th-accordion-section].accordion-expanded [th-accordion-header]:after {
+    transform: rotate(45deg);
 }

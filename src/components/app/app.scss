@@ -1,8 +1,14 @@
 @import "../../styles/vars";
 
 .section {
-  display: flex;
-  flex-direction: column;
+  padding: 0 0.5rem;
+
+  @include respond-to('medium') {
+    padding: 0 1rem;
+  }
+}
+
+.section-content, .section-title {
   padding: 0 0.5rem;
 
   @include respond-to('medium') {
@@ -10,22 +16,6 @@
   }
 
   @include respond-to('large') {
-    flex-direction: row;
+    margin-left: 20rem;
   }
-}
-
-.section-title {
-  @include respond-to('large') {
-    //align-self: stretch;
-    flex-shrink: 0;
-    opacity: 0;
-    //font-size: $font-x-large;
-    //justify-content: center;
-    //padding-top: 5rem;
-    width: 20rem;
-
-  }
-}
-
-.section-content {
 }

@@ -37,12 +37,11 @@
 
   .menu-list {
     background: $blue;
-    display: flex;
+    display: none;
     flex-direction: column;
     list-style: none;
     padding: 0.5rem 0;
     text-align: center;
-    visibility: hidden;
 
     @include respond-to('large') {
       background: transparent;
@@ -71,14 +70,14 @@
 
   &.visible {
     .menu-list {
-      visibility: visible;
+      display: flex;
     }
   }
 
   &.has-visible {
     @include respond-to('large') {
       .menu-list {
-        visibility: visible;
+        display: flex;
       }
     }
   }

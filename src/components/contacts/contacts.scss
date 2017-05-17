@@ -5,7 +5,7 @@
   display: flex;
   justify-content: flex-end;
   position: absolute;
-  top: 28rem;
+  top: 26rem;
   z-index: 1;
 
   .container {
@@ -22,6 +22,12 @@
 
     span:first-of-type {
       margin-right: 0.5em;
+    }
+  }
+
+  .contacts-title {
+    @include respond-to('large') {
+      display: none;
     }
   }
 
@@ -45,24 +51,42 @@
     position: fixed;
     right: 0;
     width: 3rem;
+
   }
 
   &.fixed {
     position: fixed;
     top: 23rem;
 
+    @include respond-to('large') {
+      bottom: 1rem;
+      justify-content: flex-start;
+      top: auto;
+      width: auto;
+      z-index: 200;
+    }
+
     .contacts-toggle {
       display: flex;
+
+      @include respond-to('large') {
+        display: none;
+      }
     }
 
     .container {
       background: $blue;
-      visibility: hidden;
+      display: none;
+
+      @include respond-to('large') {
+        background: transparent;
+        display: block;
+      }
     }
 
     &.visible {
       .container {
-        visibility: visible;
+        display: block;
       }
     }
   }

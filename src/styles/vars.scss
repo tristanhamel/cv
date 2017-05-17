@@ -25,8 +25,8 @@ $font-x-large: 36px;
 /* break points */
 
 $breakpoint-medium: 480px;
-$breakpoint-large: 768px;
-$breakpoint-x-large: 992px;
+$breakpoint-large: 992px;
+$breakpoint-x-large: 1400px;
 
 $breakpoints: (
         'medium': (min-width: $breakpoint-medium),

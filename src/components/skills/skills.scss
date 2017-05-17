@@ -2,8 +2,8 @@
 
 .skills {
   .skills-list-elem {
-    border: solid rgba($white, 0.8);
-    border-width: 1px 0 0 0;
+      //border: solid rgba($white, 0.8);
+      //border-width: 1px 0 0 0;
 
     .text {
       color: $white;
@@ -12,23 +12,23 @@
   }
 
   .skill-list-header {
-    color: $green;
-    cursor: pointer;
-    display: flex;
-    padding: 0.5rem 3rem 0.5rem 0.5rem;
-    transition: background 0.2s;
-
-    &:hover {
-      background: $dark-green;
-    }
+    //color: $green;
+    //cursor: pointer;
+    //display: flex;
+    //padding: 0.5rem 3rem 0.5rem 0.5rem;
+    //transition: background 0.2s;
+    //
+    //&:hover {
+    //  background: $dark-green;
+    //}
   }
 
-  .accordion-expanded .skill-list-header {
-    background: $dark-green;
-  }
+  //.accordion-expanded .skill-list-header {
+  //  background: $dark-green;
+  //}
 
   .skill-list-content {
-    background: $dark-green;
-    padding: 0.5rem 0 1rem 1rem;
+    //background: $dark-green;
+    //padding: 0.5rem 0 1rem 1rem;
   }
 }
