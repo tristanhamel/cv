@@ -4,6 +4,9 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  position: absolute;
+  top: 28rem;
+  z-index: 1;
 
   .container {
     padding: 0 1rem;
@@ -26,5 +29,41 @@
     display: flex;
     justify-content: space-around;
     padding: 0.2rem 0;
+  }
+
+  .contacts-toggle {
+    align-items: center;
+    background: $blue;
+    border-radius: 50%;
+    bottom: 0;
+    box-shadow: black 0 0 2px;
+    cursor: pointer;
+    display: none;
+    justify-content: center;
+    height: 3rem;
+    margin: 0.5rem;
+    position: fixed;
+    right: 0;
+    width: 3rem;
+  }
+
+  &.fixed {
+    position: fixed;
+    top: 23rem;
+
+    .contacts-toggle {
+      display: flex;
+    }
+
+    .container {
+      background: $blue;
+      visibility: hidden;
+    }
+
+    &.visible {
+      .container {
+        visibility: visible;
+      }
+    }
   }
 }
