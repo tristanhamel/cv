@@ -9,6 +9,7 @@
 }
 
 .section-content {
+  background: $bg-default-color;
   border: 1px solid $pale-gray;
   padding: 0.5rem;
 
@@ -18,7 +19,7 @@
 
   @include respond-to('large') {
     margin-left: 20rem;
-    box-shadow: 0px 5px 5px $light-gray;
+    box-shadow: 0px 5px 5px $black;
     margin-right: 1rem;
   }
 }

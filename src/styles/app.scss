@@ -1,7 +1,9 @@
 @import './vars';
 
 body {
-  background: $bg-default-color;
+  background-color: $dark-gray;
+  background-position-y: -165px;
+  background-attachment: fixed;
   color: $font-default-color;
   font-family: Verdana;
   font-weight: 300;
