@@ -1,9 +1,15 @@
 /* Colors */
-$blue: rgba(64, 98, 187, 1);
-$light-green: rgba(201, 228, 202, 1);
-$green: rgba(135, 187, 162, 1);
-$dark-green: rgba(59, 96, 100, 1);
-$dark-blue: rgba(54, 73, 88, 1);
+//$blue: rgba(64, 98, 187, 1);
+//$light-green: rgba(201, 228, 202, 1);
+//$green: rgba(135, 187, 162, 1);
+//$dark-green: rgba(59, 96, 100, 1);
+//$dark-blue: rgba(54, 73, 88, 1);
+
+$pink: rgba(227, 0, 116, 1);
+$light-pink: rgba($pink, 0.2);
+$dark-green: rgba(3, 71, 72, 1);
+$blue-green: rgba(20, 129, 186, 1);
+$blue: rgba(58, 134, 255, 1);
 
 $black: #000;
 $light-gray: #333;
@@ -12,6 +18,16 @@ $gray: #aaa;
 $light-gray: #ddd;
 $pale-gray: #eee;
 $white: #fff;
+
+$font-default-color: $black;
+$font-link-color: $pink;
+$font-link-color-active: $pink;
+$bg-default-color: $white;
+$bg-active-color: $pink;
+$bg-active-color-alt: $pink;
+$active-color: $pink;
+$emphasis-color: $pink;
+$emphasis-color-alt: $light-pink;
 
 /* typography */
 

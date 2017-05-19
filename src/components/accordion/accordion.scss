@@ -9,25 +9,25 @@ $plus-sign-padding: 0.5rem;
 }
 
 [th-accordion-content] {
-  background: $dark-green;
+  background: $pale-gray;
   display: none;
   padding: 0.5rem 0 1rem 1rem;
 }
 
 [th-accordion-header] {
   position: relative;
-  color: $green;
+  color: $black;
   cursor: pointer;
   display: flex;
   padding: 0.5rem 3rem 0.5rem 0.5rem;
   transition: background 0.2s;
 
   &:hover {
-    background: $dark-green;
+    background: $pale-gray;
   }
 
   &:after {
-    background: $green;
+    background: $emphasis-color;
     border-radius: 50%;
     content: '+';
     color: $white;
@@ -44,7 +44,7 @@ $plus-sign-padding: 0.5rem;
 }
 
 .accordion-expanded [th-accordion-header]{
-  background: $dark-green;
+  background: $pale-gray;
 }
 
 [th-accordion-section].accordion-expanded [th-accordion-header]:after {

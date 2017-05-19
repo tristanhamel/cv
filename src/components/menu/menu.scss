@@ -8,10 +8,11 @@
 
   .menu-toggle {
     align-items: center;
-    background: $blue;
+    background: $emphasis-color;
     border-radius: 50%;
     bottom: 0;
     box-shadow: black 0 0 2px;
+    color: $white;
     cursor: pointer;
     display: flex;
     height: $menu-bar-height;
@@ -36,10 +37,13 @@
   }
 
   .menu-list {
-    background: $blue;
+    background: $emphasis-color;
+    color: $white;
     display: none;
     flex-direction: column;
+    height: 100vh;
     list-style: none;
+    margin: 0;
     padding: 0.5rem 0;
     text-align: center;
 
@@ -55,15 +59,24 @@
   }
 
   .menu-item {
+    font-weight: bold;
     padding: 0.5rem;
 
+    @include respond-to('large') {
+      background: #eee;
+      margin: 0.2rem -0.2rem;
+      transform: rotate(-3deg);
+      min-width: 6rem;
+    }
+
     &.active {
-      color: pink;
+      background: $pink;
+      color: $white;
 
       @include respond-to('large') {
-        transition: font-size 0.2s;
+        transition: all 0.2s;
         font-size: $font-x-large;
-        width: 12rem;
+        display: inline-flex;
       }
     }
   }
@@ -77,7 +90,9 @@
   &.has-visible {
     @include respond-to('large') {
       .menu-list {
+        align-items: flex-start;
         display: flex;
+        flex-wrap: nowrap;
       }
     }
   }

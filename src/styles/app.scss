@@ -1,8 +1,8 @@
 @import './vars';
 
 body {
-  background: $dark-blue;
-  color: $white;
+  background: $bg-default-color;
+  color: $font-default-color;
   font-family: Verdana;
   font-weight: 300;
   font-size: $font-small;
@@ -45,14 +45,14 @@ a{
   text-decoration: underline;
 
   &:not(.light-a) {
-    color: $green;
+    color: $font-link-color;
 
     &:active {
-      color: $light-green;
+      color: $font-link-color-active;
     }
 
     &:visited {
-      color: $green;
+      color: $font-link-color;
     }
 
   }
