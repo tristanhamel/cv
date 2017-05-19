@@ -1,20 +1,15 @@
 @import '../../styles/vars.scss';
 
 .contacts {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
+  color: $white;
   position: absolute;
-  top: 26rem;
-  z-index: 1;
+
+  @include respond-to('large') {
+    margin-left: 20rem;
+  }
 
   .container {
     padding: 0 1rem;
-    width: 14rem;
-
-    @include respond-to('medium') {
-      width: 18rem;
-    }
   }
 
   .contacts-line {
@@ -39,7 +34,7 @@
 
   .contacts-toggle {
     align-items: center;
-    background: $blue;
+    background: $dark-gray;
     border-radius: 50%;
     bottom: 0;
     box-shadow: black 0 0 2px;
@@ -56,11 +51,15 @@
 
   &.fixed {
     position: fixed;
-    top: 23rem;
+    top: 0;
+    height: 100vh;
+    z-index: 100;
 
     @include respond-to('large') {
       bottom: 1rem;
+      height: auto;
       justify-content: flex-start;
+      margin-left: 0;
       top: auto;
       width: auto;
       z-index: 200;
@@ -75,8 +74,9 @@
     }
 
     .container {
-      background: $blue;
+      background: $dark-gray;
       display: none;
+      height: 100%;
 
       @include respond-to('large') {
         background: transparent;
@@ -85,6 +85,8 @@
     }
 
     &.visible {
+      width: 100%;
+
       .container {
         display: block;
       }
