@@ -27,19 +27,16 @@ $plus-sign-padding: 0.5rem;
   }
 
   &:after {
-    background: $emphasis-color;
-    border-radius: 50%;
-    content: '+';
-    color: $white;
-    height: $plus-sign-wh;
+    content: '\e803';
+    color: $emphasis-color;
+    font-family: 'fontello';
     font-size: $plus-sign-wh;
-    font-weight: bold;
     line-height: $plus-sign-wh;
     position: absolute;
     right: $plus-sign-padding;
     transition: transform 0.3s;
+    transform: rotate(45deg);
     top: calc(50% - #{$plus-sign-wh/2});
-    width: $plus-sign-wh;
   }
 }
 
@@ -48,5 +45,5 @@ $plus-sign-padding: 0.5rem;
 }
 
 [th-accordion-section].accordion-expanded [th-accordion-header]:after {
-    transform: rotate(45deg);
+    transform: rotate(0deg);
 }

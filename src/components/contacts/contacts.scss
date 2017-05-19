@@ -1,15 +1,21 @@
 @import '../../styles/vars.scss';
 
 .contacts {
+  box-sizing: border-box;
   color: $white;
   position: absolute;
+  width: 100%;
 
   @include respond-to('large') {
-    margin-left: 20rem;
+    padding: 1rem 1.5rem 1rem 21rem;
   }
 
   .container {
-    padding: 0 1rem;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
   }
 
   .contacts-line {
@@ -20,14 +26,13 @@
     }
   }
 
-  .contacts-title {
-    @include respond-to('large') {
-      display: none;
-    }
+  .down-link {
+    width: 100%;
   }
 
   .contacts-social {
     display: flex;
+    font-size: 2.5rem;
     justify-content: space-around;
     padding: 0.2rem 0;
   }
@@ -50,9 +55,9 @@
   }
 
   &.fixed {
+    padding-left: 1rem;
     position: fixed;
     top: 0;
-    height: 100vh;
     z-index: 100;
 
     @include respond-to('large') {
@@ -86,6 +91,7 @@
 
     &.visible {
       width: 100%;
+      height: 100vh;
 
       .container {
         display: block;

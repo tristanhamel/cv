@@ -22,6 +22,7 @@ const modules = [
 
 // base styles
 import './styles/app.scss';
+import './icons/css/fontello.css';
 
 modules.forEach(module => {
   if(module.hasOwnProperty('selector') && module.hasOwnProperty('template')) {

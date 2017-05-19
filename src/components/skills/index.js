@@ -8,8 +8,8 @@ export const skillsComponent = {
   controller: () => {
 
     // add stars
-    const heartTemplate = '<span>&hearts;</span>';
-    const emptyHeartTemplate = '<span>&#9825;</span>';
+    const heartTemplate = '<i class="icon-heart"></i>';
+    const emptyHeartTemplate = '<i class="icon-heart-empty"></i>';
     $('.skills-list-elem').each((i, elem) => {
       let hearts = '';
       const heartsCount = parseInt($(elem).attr('hearts'));
