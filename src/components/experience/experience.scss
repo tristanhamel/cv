@@ -1,0 +1,24 @@
+.experience {
+  .experience-section-title {
+    display: flex;
+    padding: 0.5rem 3rem 0.5rem 0.5rem;
+  }
+
+  .experience-date {
+    flex-shrink: 0;
+  }
+
+  .experience-item {
+    font-weight: bold;
+  }
+
+  .experience-desc {
+    margin-top: 0;
+    padding-left: 1rem;
+  }
+
+  .experience-separator {
+    margin-bottom: 1.5rem;
+    padding-left: 0.5rem;
+  }
+}
