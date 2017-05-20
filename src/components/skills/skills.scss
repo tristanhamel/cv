@@ -1,11 +1,6 @@
 @import '../../styles/vars';
 
 .skills {
-  .section-title {
-      // needed to prevent jumpy behavior when contacts section repositions on scroll
-      margin-top: 5rem;
-  }
-
   .skills-list-elem {
     .text {
       width: 100%;

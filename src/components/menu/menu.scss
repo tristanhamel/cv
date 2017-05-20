@@ -36,23 +36,34 @@
     }
   }
 
-  .menu-list {
+  .menu-container {
     background: $emphasis-color;
+    box-sizing: border-box;
     color: $white;
     display: none;
-    flex-direction: column;
     height: 100vh;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 2rem;
+
+    @include respond-to('large') {
+      background: transparent;
+      position: fixed;
+      top: 0;
+      height: 100vh;
+
+    }
+  }
+
+  .menu-list {
+    flex-direction: column;
     list-style: none;
+    font-size: $font-large;
     margin: 0;
     padding: 0.5rem 0;
     text-align: center;
 
     @include respond-to('large') {
-      background: transparent;
-      font-size: $font-large;
-      position: fixed;
-      top: 0;
-      height: 100vh;
       justify-content: center;
       margin-top: 0;
     }
@@ -81,14 +92,47 @@
     }
   }
 
+  .contacts {
+    a {
+      color: $white;
+
+      &:visited {
+        color: $white;
+      }
+    }
+
+    @include respond-to('large') {
+      a {
+        color: $emphasis-color;
+
+        &:visited {
+          color: $emphasis-color;
+        }
+      }
+    }
+  }
+
   &.visible {
-    .menu-list {
+    .menu-container {
       display: flex;
     }
   }
 
   &.has-visible {
     @include respond-to('large') {
+      .menu-container {
+        align-items: flex-start;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding: 4rem 0 2rem 0;
+        width: 20rem;
+      }
+
+      .contacts {
+        padding: 0 0 0 1rem;
+      }
+
       .menu-list {
         align-items: flex-start;
         display: flex;
