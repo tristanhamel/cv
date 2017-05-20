@@ -8,6 +8,7 @@ export const menuComponent =  {
   controller: () => {
     const toggle = $('.menu-toggle-button');
     const menu = $('.menu');
+    let sectionsXY;
 
     $(document).ready(() => {
       // populate menu
@@ -23,8 +24,8 @@ export const menuComponent =  {
       $('.menu-list').append(menuElemsContent);
 
       // spy scroll position
-      let sectionsXY = registerOffset($('.section'));
-      let scrollOffset = $(window).height() / 2;
+      sectionsXY = registerOffset($('.section'));
+      const scrollOffset = $(window).height() / 2;
 
       $(window).scroll(() => {
         const activeElem = sectionsXY.find(s => s.top < $(window).scrollTop() + scrollOffset);
@@ -50,6 +51,21 @@ export const menuComponent =  {
 
           menu.removeClass('has-visible');
         }
+      });
+
+      // menu scroll links
+      const menuItems = $('.menu-item');
+      menuItems.click(event => {
+        menu.removeClass('visible');
+
+        const target = sectionsXY
+          .find(section => section.index === menuItems.index(event.target));
+
+        if(!target || target.isActive) {
+          return;
+        }
+
+        $('body').animate({scrollTop: target.top}, 1000);
       });
     });
 
