@@ -7,6 +7,7 @@ import { skillsComponent } from './components/skills';
 import { experienceComponent } from './components/experience';
 import { educationComponent } from './components/education';
 import { envoiComponent } from './components/envoi';
+import { i18nComponent } from './components/i18n';
 
 const modules = [
   accordionComponent,
@@ -17,7 +18,8 @@ const modules = [
   skillsComponent,
   experienceComponent,
   educationComponent,
-  envoiComponent
+  envoiComponent,
+  i18nComponent
 ];
 
 // base styles

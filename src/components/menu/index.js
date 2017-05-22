@@ -13,7 +13,7 @@ export const menuComponent =  {
     $(document).ready(() => {
       // populate menu
       const menuElemTemplate = `
-        <li class="menu-item">
+        <li class="menu-item" l18n>
           ###
         </li>`;
       let menuElemsContent = '';
@@ -25,12 +25,17 @@ export const menuComponent =  {
 
       // spy scroll position
       sectionsXY = registerOffset($('.section'));
-      const scrollOffset = $(window).height() / 2;
+      const scrollOffset = 100;
 
-      $(window).scroll(() => {
-        const activeElem = sectionsXY.find(s => s.top < $(window).scrollTop() + scrollOffset);
+      // roughly the header's height
+      const topOffset = 500;
 
-        if(activeElem && !activeElem.isActive) {
+      $(window).scroll((e) => {
+        const scrollTop = $(e.target).scrollTop();
+
+        const activeElem = sectionsXY.find(s => s.top < scrollTop + scrollOffset);
+
+        if(activeElem && !activeElem.isActive && scrollTop > topOffset) {
           sectionsXY = sectionsXY
             .map(elm => elm.top === activeElem.top ?
               Object.assign(elm, {isActive: true}) :
@@ -42,7 +47,7 @@ export const menuComponent =  {
             .addClass('active');
 
           menu.addClass('has-visible');
-        } else if(!activeElem) {
+        } else if(!activeElem || scrollTop < topOffset) {
           sectionsXY = sectionsXY
             .map(elm => Object.assign(elm, {isActive: false}));
 
@@ -65,7 +70,7 @@ export const menuComponent =  {
           return;
         }
 
-        $('body').animate({scrollTop: target.top}, 1000);
+        $('body').animate({scrollTop: target.top}, 700);
       });
     });
 

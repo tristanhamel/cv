@@ -1,0 +1,20 @@
+@import '../../styles/vars';
+
+.l18n {
+  display: flex;
+  justify-content: flex-end;
+  padding-left: 1rem;
+
+  .langToggle {
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: $white;
+    font-size: $font-medium;
+    text-decoration: underline;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

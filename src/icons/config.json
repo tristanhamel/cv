@@ -55,6 +55,18 @@
       "src": "fontawesome"
     },
     {
+      "uid": "499b745a2e2485bdd059c3a53d048e5f",
+      "css": "cancel",
+      "code": 59399,
+      "src": "elusive"
+    },
+    {
+      "uid": "c55fdf978f617992b43ee7cbaa6ef87e",
+      "css": "menu",
+      "code": 61448,
+      "src": "mfglabs"
+    },
+    {
       "uid": "136d09eb8416ae64fb6d1e055083495e",
       "css": "close-circled-o",
       "code": 59418,
