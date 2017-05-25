@@ -33,7 +33,7 @@ export const menuComponent =  {
       $(window).scroll((e) => {
         const scrollTop = $(e.target).scrollTop();
 
-        const activeElem = sectionsXY.find(s => s.top < scrollTop + scrollOffset);
+        const activeElem = sectionsXY.find(s => $(s.element).offset().top < scrollTop + scrollOffset);
 
         if(activeElem && !activeElem.isActive && scrollTop > topOffset) {
           sectionsXY = sectionsXY
@@ -70,7 +70,7 @@ export const menuComponent =  {
           return;
         }
 
-        $('body').animate({scrollTop: target.top}, 700);
+        $('body').animate({scrollTop: $(target.element).offset().top}, 700);
       });
     });
 

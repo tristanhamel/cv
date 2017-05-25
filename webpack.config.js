@@ -17,11 +17,10 @@ module.exports = {
       },
       {
         test: /\.(css|scss)$/,
-        use: [
-          {loader: 'style-loader'},
-          {loader: 'css-loader'},
-          {loader: 'sass-loader'}
-        ]
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader', 'sass-loader']
+        })
       },
       {
         test: /\.html$/,

@@ -10,7 +10,7 @@ body {
   font-size: $font-small;
   line-height: $font-small*1.5;
   margin: 0;
-  padding-bottom: 3rem;
+  padding-bottom: 8rem;
 
   @include respond-to('medium'){
     font-size: $font-medium;
