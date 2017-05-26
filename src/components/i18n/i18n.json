@@ -1,5 +1,5 @@
 [
-  {"id":"DOWNLOAD_AS_PDF", "en": "Download as pdf", "fr": "télécharger pdf"},
+  {"id":"PRINT_FRIENDLY", "en": "Print friendly version", "fr": "Version imprimable"},
   {"id":"EDUCATION_TITLE", "en": "Education", "fr": "Education"},
   {"id":"MFA_TITLE", "en": "Master in Fine Arts", "fr": "Master en beaux-arts"},
   {"id":"MFA_DESC", "en": "Major in environmental art. Graduated without outstanding results.", "fr": "Majeure en \"Environmental Art\". Diplômé avec les félicitations du jury."},
