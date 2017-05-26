@@ -1,0 +1,107 @@
+@import "./vars";
+
+@media print {
+  body {
+    background: white;
+  }
+
+  a .link-text {
+    display: inline;
+  }
+
+  .intro {
+    background: none;
+    height: 12rem;
+
+    .content {
+      padding: 2rem;
+    }
+
+    .title {
+      background: white;
+      color: $emphasis-color;
+    }
+
+    .subtitle {
+      background: white;
+      color: $dark-gray;
+    }
+  }
+
+  th-menu {
+    display: none;
+  }
+
+  .section-title {
+    background: white;
+    color: $emphasis-color;
+    margin: 0 2rem;
+  }
+
+  .section-content {
+    box-shadow: none;
+    margin: 0 1rem;
+  }
+
+  .contacts {
+    padding: 0 2rem;
+
+    .down-link {
+      display: none;
+    }
+
+    .container {
+      display: block;
+    }
+
+    .contacts-line {
+      color: black;
+
+      i, a {
+        color: $dark-gray;
+        text-decoration: none;
+      }
+    }
+
+    .contacts-social {
+      display: block;
+      font-size: $font-medium;
+      padding: 0;
+
+      a {
+        color: $dark-gray;
+        display: block;
+        padding: 0.2rem 0;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .accordion-expanded [th-accordion-header], [th-accordion-content] {
+    background: white;
+    display: block;
+    padding: 0 0 0 1rem;
+
+    &.skill-list-content {
+      display: none;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  [th-accordion-header] {
+    font-weight: bold;
+  }
+
+  [th-accordion-header]:after {
+    display: none;
+  }
+
+  .skills .section-content, .education .section-content {
+    page-break-after: always;
+  }
+
+
+}

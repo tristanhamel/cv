@@ -24,6 +24,7 @@ const modules = [
 
 // base styles
 import './styles/app.scss';
+import './styles/print.scss';
 import './icons/css/fontello.css';
 
 modules.forEach(module => {

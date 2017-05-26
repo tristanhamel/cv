@@ -59,4 +59,9 @@ a{
     }
 
   }
+
+  // specially for print version - hidden by default
+  .link-text {
+    display: none;
+  }
 }
