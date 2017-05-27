@@ -124,8 +124,20 @@
       flex-direction: column;
     }
 
+    .contacts-group {
+      text-align: center;
+
+      @include respond-to('large') {
+        text-align: left;
+      }
+    }
+
     .down-link {
       text-align: center;
+    }
+
+    .contacts-social {
+      width: 100%;
     }
 
     @include respond-to('large') {
