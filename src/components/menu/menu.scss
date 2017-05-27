@@ -54,11 +54,16 @@
     }
 
     @include respond-to('large') {
+      align-items: flex-start;
       background: transparent;
       position: fixed;
-      top: 0;
+      display: flex;
+      flex-wrap: nowrap;
       height: 100vh;
-
+      justify-content: space-between;
+      padding: 1rem 0;
+      top: 0;
+      width: 20rem;
     }
   }
 
@@ -67,10 +72,14 @@
     list-style: none;
     font-size: $font-large;
     margin: 0;
-    padding: 0.5rem 0;
+    padding: 2rem 0;
     text-align: center;
 
     @include respond-to('large') {
+      align-items: flex-start;
+      display: flex;
+      flex-wrap: nowrap;
+      font-size: $font-large;
       justify-content: center;
       margin-top: 0;
     }
@@ -120,6 +129,8 @@
     }
 
     @include respond-to('large') {
+      padding: 0 0 0 1rem;
+
       a {
         color: $emphasis-color;
 
@@ -155,6 +166,7 @@
     }
   }
 
+  // overlapping menu on mobile
   &.visible {
     .menu-container {
       display: flex;
@@ -166,25 +178,27 @@
     }
   }
 
+  // side menu with transitions on desktop
+  @include respond-to('large') {
+    .menu-list {
+      transform: translateX(-110%);
+      transition: transform 0.3s ease-out;
+    }
+
+    .contacts, .l18n, .source-link {
+      opacity: 0;
+      transition: opacity 0.3s ease-out;
+    }
+  }
+
   &.has-visible {
     @include respond-to('large') {
-      .menu-container {
-        align-items: flex-start;
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        padding: 1rem 0;
-        width: 20rem;
-      }
-
-      .contacts {
-        padding: 0 0 0 1rem;
-      }
-
       .menu-list {
-        align-items: flex-start;
-        display: flex;
-        flex-wrap: nowrap;
+        transform: translateX(0);
+      }
+
+      .contacts, .l18n, .source-link {
+        opacity: 1;
       }
     }
   }

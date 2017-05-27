@@ -63,14 +63,19 @@ export const menuComponent =  {
       menuItems.click(event => {
         menu.removeClass('visible');
 
+        const index = menuItems.index(event.target);
         const target = sectionsXY
-          .find(section => section.index === menuItems.index(event.target));
+          .find(section => section.index === index);
 
         if(!target || target.isActive) {
           return;
         }
 
-        $('body').animate({scrollTop: $(target.element).offset().top}, 700);
+        // we want to give 20px offset for the first element
+        // so that the side menu elem remains active after the scroll..
+        const offset = index ? $(target.element).offset().top : $(target.element).offset().top + 20;
+
+        $('body').animate({scrollTop: offset}, 700);
       });
     });
 
