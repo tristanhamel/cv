@@ -1,15 +1,12 @@
 @import '../../styles/vars';
 
 .skills {
+  // remove general padding for skills since it's the first section
+  padding: 0;
+
   .skills-list-elem {
     .text {
       width: 100%;
     }
-  }
-
-  .skill-list-header {
-  }
-
-  .skill-list-content {
   }
 }

@@ -4,6 +4,10 @@ import './contacts.scss';
 
 const controller = () => {
   $(document).ready(() => {
+    if(!window.print) {
+      $('.print-action').css({display: 'none'});
+    }
+
     $('.print-action').click(() => {
       window.print();
     });
