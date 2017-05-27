@@ -4,17 +4,17 @@
   display: flex;
   position: relative;
   background: url("../../images/itse_bw_480x160-min.png");
-  height: 10rem;
+  height: 160px;
   width: 100%;
 
   @include respond-to('medium') {
     background: url("../../images/itse_bw_990x240-min.png");
-    height: 15rem;
+    height: 240px;
   }
 
   @include respond-to('large') {
-    background: url("../../images/itse_bw_400x2500-min.png");
-    height: 25rem;
+    background: url("../../images/itse_bw_400x1600-min.png");
+    height: 400px;
   }
 
   .spacer {

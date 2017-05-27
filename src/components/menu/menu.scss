@@ -82,7 +82,7 @@
     padding: 0.5rem;
 
     @include respond-to('large') {
-      background: #eee;
+      background: $light-gray;
       margin: 0.2rem -0.2rem;
       transform: rotate(-3deg);
       min-width: 6rem;
@@ -127,6 +127,31 @@
           color: $emphasis-color;
         }
       }
+
+      .container {
+        align-items: flex-start;
+      }
+
+      .down-link {
+        text-align: left;
+      }
+    }
+  }
+
+  .source-link {
+    text-align: center;
+
+    a, a:visited {
+      color: $white;
+    }
+
+    @include respond-to('large') {
+      padding-left: 1rem;
+      text-align: left;
+
+      a {
+        color: $emphasis-color;
+      }
     }
   }
 
@@ -148,7 +173,7 @@
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-between;
-        padding: 4rem 0 2rem 0;
+        padding: 1rem 0;
         width: 20rem;
       }
 

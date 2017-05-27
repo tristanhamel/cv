@@ -1,5 +1,9 @@
 @import './vars';
 
+html {
+  background: $pale-gray;
+}
+
 body {
   background-color: $dark-gray;
   background-position-y: -165px;
@@ -9,7 +13,8 @@ body {
   font-weight: 300;
   font-size: $font-small;
   line-height: $font-small*1.5;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 1600px;
   padding-bottom: 8rem;
 
   @include respond-to('medium'){
