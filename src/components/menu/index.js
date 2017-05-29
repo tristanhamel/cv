@@ -73,9 +73,10 @@ export const menuComponent =  {
 
         // we want to give 20px offset for the first element
         // so that the side menu elem remains active after the scroll..
-        const offset = index ? $(target.element).offset().top : $(target.element).offset().top + 20;
+        const offset = index ? $(target.element).offset().top : $(target.element).offset().top;
 
-        $('body').animate({scrollTop: offset}, 700);
+        // need to animate both body and html for FF
+        $('body,html').animate({scrollTop: offset}, 700);
       });
     });
 

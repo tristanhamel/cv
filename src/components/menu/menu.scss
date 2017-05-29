@@ -47,6 +47,7 @@
     height: 100vh;
     justify-content: space-between;
     flex-direction: column;
+    overflow-x: hidden;
     padding: 1rem 1rem 4rem;
 
     @include respond-to('medium') {
@@ -92,6 +93,7 @@
 
     @include respond-to('large') {
       background: $light-gray;
+      border: 1px solid #333; // needed to avoid jagged edges on firefox
       margin: 0.2rem -0.2rem;
       transform: rotate(-3deg);
       min-width: 6rem;
@@ -200,6 +202,7 @@
     .contacts, .l18n, .source-link {
       opacity: 0;
       transition: opacity 0.3s ease-out;
+      visibility: hidden;
     }
   }
 
@@ -210,6 +213,7 @@
       }
 
       .contacts, .l18n, .source-link {
+        visibility: visible;
         opacity: 1;
       }
     }
