@@ -1,7 +1,7 @@
 {
   "name": "new-cv",
   "version": "0.0.0",
-  "description": "2016 simple resume",
+  "description": "2017 simple resume",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
