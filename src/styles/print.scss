@@ -13,18 +13,28 @@
     background: none;
     height: 12rem;
 
+    .spacer {
+      display: none;
+    }
+
     .content {
       padding: 2rem;
+      width: 100%;
+      align-items: center;
     }
 
     .title {
       background: white;
-      color: $emphasis-color;
+      color: $dark-gray;
+      font-size: $font-large;
+      margin: 0;
     }
 
     .subtitle {
       background: white;
-      color: $dark-gray;
+      color: $emphasis-color;
+      font-size: $font-x-large;
+      margin-left: 0;
     }
   }
 
@@ -94,6 +104,7 @@
 
   [th-accordion-header] {
     font-weight: bold;
+    padding: .5rem 3rem 0rem .5rem;
   }
 
   [th-accordion-header]:after {
