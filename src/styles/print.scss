@@ -86,6 +86,10 @@
         text-decoration: none;
       }
     }
+
+    .contacts-web-version {
+      display: block;
+    }
   }
 
   .accordion-expanded [th-accordion-header], [th-accordion-content] {
@@ -107,6 +111,12 @@
     padding: .5rem 3rem 0rem .5rem;
   }
 
+  .skills {
+    .skills-intro, .icon-heart, .icon-heart-empty {
+      display: none;
+    }
+  }
+
   [th-accordion-header]:after {
     display: none;
   }
@@ -115,5 +125,8 @@
     page-break-after: always;
   }
 
+  .experience-separator, .experience-section:last-of-type {
+    display: none;
+  }
 
 }

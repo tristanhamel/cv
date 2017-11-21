@@ -44,4 +44,14 @@
       padding: 0 1rem;
     }
   }
+
+  .contacts-web-version {
+    color: $font-default-color;
+    display: none;
+    margin-top: 1rem;
+
+    a {
+      text-decoration: none;
+    }
+  }
 }
